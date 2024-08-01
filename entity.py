@@ -2,7 +2,8 @@ from typing import Tuple
 
 
 class Entity:
-    def __init__(self, x: int, y: int, char: str, color: Tuple[int, int, int]):
+
+    def __init__(self, x:int, y: int, char:str, color: Tuple[int, int, int]):
         self.x = x
         self.y = y
         self.char = char
