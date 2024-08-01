@@ -10,9 +10,10 @@ if TYPE_CHECKING:
 
 
 class GameMap:
-    def __init__(self, width: int, height: int, entities: Iterable[Entity]):
+    def __init__(self, width: int, height: int):
         self.width, self.height = width, height
-        self.entities = set(entities)
+        # self.entities = set(entities)
+        # entities: Iterable[Entity]
         self.tiles = np.full((width, height), fill_value=tile_types.wall, order="F")
         self.visible = np.full((width, height), fill_value=False, order="F")
         self.explored = np.full((width, height), fill_value=False, order="F")
